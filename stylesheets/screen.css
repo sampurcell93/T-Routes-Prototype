@@ -448,6 +448,13 @@ ul.your-routes li span.delete {
   color: red;
 }
 
+/* line 289, ../sass/screen.scss */
+td {
+  width: 50%;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
 @font-face {
   font-family: 'icons';
   src: url("../icomoon/fonts/iconminia.eot") format("eot"), url("../icomoon/fonts/iconminia.woff") format("woff"), url("../icomoon/fonts/iconminia.ttf") format("truetype");

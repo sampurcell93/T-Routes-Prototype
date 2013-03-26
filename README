@@ -1,1 +1,10 @@
-I incorporated most of my previous design into this prototype, with some minor changes. Here, I changed the position of buttons to be easier to understand, I think. Also, I changed the order of some of the buttons on the bottom of the screen. Given the software stack I used (HTML, SCSS, Javascript, jQuery), there are very few limitations. These are time tested languages that I have experience with, so the only technical limitations are few.
+THE PROTOTYPE FILES CAN BE FOUND AT https://github.com/sampurcell93/T-Routes-Prototype
+Images are included in the github
+
+THE WORKING PROTOTYPE CAN BE FOUND AT http://young-springs-1329.herokuapp.com/
+
+At the allowance of Mike Shah, I worked alone on this project, and will do so for the remainder of the course.
+
+I incorporated most of my previous design into this prototype, with some minor changes. Here, I changed the position of buttons to be easier to understand, I think. Also, I changed the order of some of the buttons on the bottom of the screen. Given the software stack I used (HTML, SCSS, Javascript, jQuery), there are very few limitations. These are time tested languages that I have experience with, so the technical limitations are few. However, writing in a stack designed for the production of actual apps (rather than prototyping) means that things which might be simple to draw out, might be harder to code. In the case of each station's info box, making the box mobile friendly is somewhat difficult.
+
+There is a sample route drawn (a remnant of an earlier project using mapping), to give an idea of the routing.

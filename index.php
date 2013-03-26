@@ -47,8 +47,50 @@
 				<li><a href='#'>Sam's to Nelly's</a> <span class='delete fr' data-pane='delete-sam'>X</span><span data-pane='update-sam' class='update fr'>Update</span></li>
 			</ul>
 		</div>
-		<div class='fixed hidden pane' id='route-data'>
+		<div class='fixed pane' id='route-data'>
 			<h2>Route Data</h2>
+			<table >
+				<tr>
+					<td>Number of Stops</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>Est. Time</td>
+					<td>12 Minutes</td>
+				</tr>
+				<tr>
+					<td>Closest Station</td>
+					<td>1.012 miles</td>
+				</tr>
+				<tr>
+					<td>Fare</td>
+					<td>$1.25</td>
+				</tr>
+				<tr>
+					<td>CharlieCard Balance</td>
+					<td>$10.00</td>
+				</tr>
+				<tr>
+					<td>Line changes</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Closing time</td>
+					<td>12:30AM</td>
+				</tr>
+				<tr>
+					<td>Accidental Deaths/yr</td>
+					<td>12</td>
+				</tr>
+				<tr>
+					<td>Pets allowed</td>
+					<td>No</td>
+				</tr>
+				<tr>
+					<td>Bikes Allowed</td>
+					<td>Yes</td>
+				</tr>
+			</table>
 		</div>
 		<div class='fixed hidden pane' id='accessibility'>
 			<h2>Accessibility</h2>
