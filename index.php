@@ -22,7 +22,7 @@
 				<button class='inline fr close'>Yes</button>			
 			</div>
 			<div class='fixed hidden pane' id='delete-sam'>
-				<p>Are you sure you want to delete the route "Sam's to Nelly's"?</p>
+				<p>Are you sure you want to delete the route "Sam to Nelly"?</p>
 				<button class='inline fr close'>Yes</button>	
 			</div>
 
@@ -34,9 +34,9 @@
 				<button class='inline fr close'>Update</button>			
 			</div>
 			<div class='fixed hidden pane' id='update-sam'>
-				<input type='text' placeholder='Change Start Name' value="Sam's"/>
+				<input type='text' placeholder='Change Start Name' value="Sam"/>
 				<input type='text' placeholder='Change Start Loc' value='10 Winthrop Ave, Medford MA 02155'/>
-				<input type='text' placeholder='Change End Name' value="Nelly's"/>
+				<input type='text' placeholder='Change End Name' value="Nelly"/>
 				<input type='text' placeholder='Change End Loc' value='1234 Southie by the Water, 03456'/>
 				<button class='inline fr close'>Update</button>	
 			</div>
@@ -44,7 +44,7 @@
 			<h2>Your routes</h2>
 			<ul class='your-routes'>
 				<li><a href='#'>Home to Work</a> <span class='delete fr' data-pane='delete-home'>X</span><span data-pane='update-home' class='update fr'>Update</span></li>
-				<li><a href='#'>Sam's to Nelly's</a> <span class='delete fr' data-pane='delete-sam'>X</span><span data-pane='update-sam' class='update fr'>Update</span></li>
+				<li><a href='#'>Sam to Nelly</a> <span class='delete fr' data-pane='delete-sam'>X</span><span data-pane='update-sam' class='update fr'>Update</span></li>
 			</ul>
 		</div>
 		<div class='fixed pane hidden' id='route-data'>

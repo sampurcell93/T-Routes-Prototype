@@ -411,44 +411,48 @@ label {
 /* line 256, ../sass/screen.scss */
 div.close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0px;
+  right: 0px;
   cursor: pointer;
+  width: 20px;
+  height: 20px;
+  display: block;
+  text-align: center;
 }
 
-/* line 263, ../sass/screen.scss */
+/* line 267, ../sass/screen.scss */
 ul.your-routes {
   display: block;
   width: 95%;
   margin: 10px auto;
 }
-/* line 268, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 ul.your-routes li {
   display: block;
   border: 1px solid #ddd;
   border-bottom: none;
   padding: 4px 6px;
 }
-/* line 274, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 ul.your-routes li:last-child {
   border-bottom: 1px solid #ddd;
 }
-/* line 278, ../sass/screen.scss */
+/* line 282, ../sass/screen.scss */
 ul.your-routes li span {
   padding: 0px 5px;
   color: #61A7ED;
   cursor: pointer;
 }
-/* line 283, ../sass/screen.scss */
+/* line 287, ../sass/screen.scss */
 ul.your-routes li span:hover {
   color: #A5D5FF;
 }
-/* line 284, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 ul.your-routes li span.delete {
   color: red;
 }
 
-/* line 289, ../sass/screen.scss */
+/* line 293, ../sass/screen.scss */
 td {
   width: 50%;
   text-align: center;

@@ -255,9 +255,13 @@ label {cursor: pointer; padding: 5px;}
 
 div.close {
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	top: 0px;
+	right: 0px;
 	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: block;
+	text-align: center;
 }	
 
 ul.your-routes {
