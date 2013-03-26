@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../Users/spurce02/.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../Users/sampurcell/.rvm/gems/ruby-1.9.3-p194/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -76,7 +76,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 27, ../sass/screen.scss */
 .fixed {
-  position: fixed;
+  position: absolute;
 }
 
 /* line 28, ../sass/screen.scss */
@@ -103,49 +103,54 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body {
   font-size: 14px;
   font-family: sans-serif;
-  height: 100%;
+  background: url("../iphone5.png") no-repeat 49.65% 80px #313131;
 }
 
 /* line 39, ../sass/screen.scss */
-html {
-  height: 100%;
-}
-
-/* line 41, ../sass/screen.scss */
 h2 {
   font-size: 1.7em;
   padding: 5px;
   margin: 5px;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 45, ../sass/screen.scss */
 h3 {
   font-size: 1.3em;
   margin: 5px;
   padding: 5px;
 }
 
+/* line 51, ../sass/screen.scss */
+a {
+  color: #0277ED;
+}
 /* line 53, ../sass/screen.scss */
+a:visited {
+  color: #0277ED;
+}
+
+/* line 56, ../sass/screen.scss */
 #map-canvas {
   height: 100%;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 p {
   line-height: 1.5em;
   text-indent: .6em;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 65, ../sass/screen.scss */
 .wrap {
   display: block;
-  width: 100%;
-  height: 100%;
-  margin: 0 auto;
+  width: 2.31in;
+  height: 4.17in;
+  margin: 160px auto;
   border: 1px solid #ddd;
+  position: relative;
 }
 
-/* line 70, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 input[type='text'] {
   width: 97%;
   margin: 5px auto;
@@ -168,7 +173,7 @@ input[type='text'] {
   background: #fff;
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 86, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 input[type='text']:focus {
   -webkit-box-shadow: inset 0px 1px 2px #bbbbbb, 0px 1px 1px #f9f9f9;
   -moz-box-shadow: inset 0px 1px 2px #bbbbbb, 0px 1px 1px #f9f9f9;
@@ -195,7 +200,7 @@ input[type='text']:first-of-type:-ms-input-placeholder {
   color: #a5d5ff;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 .bar {
   z-index: 1000;
   width: 100%;
@@ -205,21 +210,21 @@ input[type='text']:first-of-type:-ms-input-placeholder {
   -moz-box-shadow: 0px 1px 3px #bbbbbb;
   box-shadow: 0px 1px 3px #bbbbbb;
 }
-/* line 102, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .bar:last-of-type {
   -webkit-box-shadow: 0px -1px 3px #bbbbbb;
   -moz-box-shadow: 0px -1px 3px #bbbbbb;
   box-shadow: 0px -1px 3px #bbbbbb;
   bottom: 0;
 }
-/* line 107, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 .bar nav ul {
-  width: 40%;
+  width: 100%;
   height: 40px;
   font-family: 'icons';
   font-size: 1.3em;
 }
-/* line 113, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .bar nav ul li {
   display: inline-block;
   height: 100%;
@@ -231,39 +236,39 @@ input[type='text']:first-of-type:-ms-input-placeholder {
   cursor: pointer;
   border-right: 1px solid #ccc;
 }
-/* line 124, ../sass/screen.scss */
+/* line 128, ../sass/screen.scss */
 .bar nav ul li:active {
   -webkit-box-shadow: inset 0px 0px 9px #cccccc;
   -moz-box-shadow: inset 0px 0px 9px #cccccc;
   box-shadow: inset 0px 0px 9px #cccccc;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 section {
   margin: 5px 10px;
 }
 
-/* line 136, ../sass/screen.scss */
+/* line 141, ../sass/screen.scss */
 button {
   padding: 5px;
   margin: 3px 5px;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 label {
   cursor: pointer;
   padding: 5px;
 }
 
-/* line 143, ../sass/screen.scss */
+/* line 148, ../sass/screen.scss */
 [data-info] {
   position: relative;
 }
-/* line 146, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 [data-info]:hover::before, [data-info]:hover::after {
   display: block;
 }
-/* line 148, ../sass/screen.scss */
+/* line 153, ../sass/screen.scss */
 [data-info]:after {
   font-family: sans-serif;
   position: absolute;
@@ -284,7 +289,7 @@ label {
   border: 1px solid #f9f9f9;
   left: 3px;
 }
-/* line 165, ../sass/screen.scss */
+/* line 170, ../sass/screen.scss */
 [data-info]:before {
   position: absolute;
   content: "";
@@ -298,7 +303,7 @@ label {
   z-index: 111;
 }
 
-/* line 179, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 .switch {
   position: relative;
   cursor: pointer;
@@ -320,13 +325,13 @@ label {
   background: #fff;
   padding: 0;
 }
-/* line 191, ../sass/screen.scss */
+/* line 196, ../sass/screen.scss */
 .switch:hover {
   -webkit-box-shadow: inset 0px 1px 2px #dddddd, 0px 0px 4px #64b3fc;
   -moz-box-shadow: inset 0px 1px 2px #dddddd, 0px 0px 4px #64b3fc;
   box-shadow: inset 0px 1px 2px #dddddd, 0px 0px 4px #64b3fc;
 }
-/* line 195, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 .switch .mask {
   pointer-events: none;
   position: absolute;
@@ -366,7 +371,7 @@ label {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 217, ../sass/screen.scss */
+/* line 222, ../sass/screen.scss */
 .switch .mask:after {
   content: "c";
   display: block;
@@ -377,17 +382,17 @@ label {
   color: red;
 }
 
-/* line 229, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 [type='checkbox']:checked ~ .switch .mask {
   left: 52.6%;
 }
-/* line 232, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 [type='checkbox']:checked ~ .switch .mask:after {
   content: "b";
   color: green;
 }
 
-/* line 238, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .pane {
   z-index: 10000;
   width: 100%;
@@ -396,12 +401,14 @@ label {
   background: rgba(255, 255, 255, 0.94);
   top: 0;
   left: 0;
+  max-height: 100%;
+  overflow: scroll;
   -webkit-box-shadow: 0px 1px 3px #bbbbbb;
   -moz-box-shadow: 0px 1px 3px #bbbbbb;
   box-shadow: 0px 1px 3px #bbbbbb;
 }
 
-/* line 249, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 div.close {
   position: absolute;
   top: 5px;
@@ -409,32 +416,36 @@ div.close {
   cursor: pointer;
 }
 
-/* line 256, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
 ul.your-routes {
   display: block;
   width: 95%;
   margin: 10px auto;
 }
-/* line 261, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 ul.your-routes li {
   display: block;
   border: 1px solid #ddd;
   border-bottom: none;
   padding: 4px 6px;
 }
-/* line 267, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 ul.your-routes li:last-child {
   border-bottom: 1px solid #ddd;
 }
-/* line 271, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 ul.your-routes li span {
   padding: 0px 5px;
   color: #61A7ED;
   cursor: pointer;
 }
-/* line 276, ../sass/screen.scss */
+/* line 283, ../sass/screen.scss */
 ul.your-routes li span:hover {
   color: #A5D5FF;
+}
+/* line 284, ../sass/screen.scss */
+ul.your-routes li span.delete {
+  color: red;
 }
 
 @font-face {

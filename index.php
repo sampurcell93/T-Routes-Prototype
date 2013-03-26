@@ -15,13 +15,14 @@
 	  	<![endif]-->
 	</head>
 	<body>
-		<div class='fixed pane' id='routes'>
+		<div class='wrap'>
+		<div class='fixed hidden pane' id='routes'>
 			<div class='fixed hidden pane' id='delete-home'>
-				Are you sure you want to delete the route "Home to Work"?
+				<p>Are you sure you want to delete the route "Home to Work"?</p>
 				<button class='inline fr close'>Yes</button>			
 			</div>
 			<div class='fixed hidden pane' id='delete-sam'>
-				Are you sure you want to delete the route "Sam's to Nelly's"?
+				<p>Are you sure you want to delete the route "Sam's to Nelly's"?</p>
 				<button class='inline fr close'>Yes</button>	
 			</div>
 
@@ -42,8 +43,8 @@
 
 			<h2>Your routes</h2>
 			<ul class='your-routes'>
-				<li>Home to Work <span class='delete fr' data-pane='delete-home'>Delete</span><span data-pane='update-home' class='update fr'>Update</span></li>
-				<li>Sam's to Nelly's <span class='delete fr' data-pane='delete-sam'>Delete</span><span data-pane='update-sam' class='update fr'>Update</span></li>
+				<li><a href='#'>Home to Work</a> <span class='delete fr' data-pane='delete-home'>X</span><span data-pane='update-home' class='update fr'>Update</span></li>
+				<li><a href='#'>Sam's to Nelly's</a> <span class='delete fr' data-pane='delete-sam'>X</span><span data-pane='update-sam' class='update fr'>Update</span></li>
 			</ul>
 		</div>
 		<div class='fixed hidden pane' id='route-data'>
@@ -69,9 +70,9 @@
 					<label for='audio-switch'>On Off</label>
 				</button>
 			</section>
+
 			<button class='close fr'>Save Settings</button>
 		</div>
-		<div class='wrap'>
 			<div class='fixed bar'>
 				<input type='text' placeholder='My location'/>
 				<input type='text' placeholder='Destination' />
