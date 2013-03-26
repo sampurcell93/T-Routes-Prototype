@@ -47,7 +47,7 @@
 				<li><a href='#'>Sam's to Nelly's</a> <span class='delete fr' data-pane='delete-sam'>X</span><span data-pane='update-sam' class='update fr'>Update</span></li>
 			</ul>
 		</div>
-		<div class='fixed pane' id='route-data'>
+		<div class='fixed pane hidden' id='route-data'>
 			<h2>Route Data</h2>
 			<table >
 				<tr>
