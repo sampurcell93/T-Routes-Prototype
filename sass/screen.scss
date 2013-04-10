@@ -55,6 +55,7 @@ a {
 
 #map-canvas { 
 	height: 100%;
+	position: relative;
 }
 
 p {
@@ -255,13 +256,15 @@ label {cursor: pointer; padding: 5px;}
 
 div.close {
 	position: absolute;
-	top: 0px;
 	right: 0px;
+	top: 10px;
 	cursor: pointer;
-	width: 20px;
-	height: 20px;
 	display: block;
+	width: 50px;
+	color: #0277ED; 
+	height: 50px;
 	text-align: center;
+	z-index: 1111;
 }	
 
 ul.your-routes {
@@ -294,6 +297,36 @@ td {
 	width: 50%;
 	text-align: center;
 	border: 1px solid #ccc;
+}
+
+.infomobile { 
+	background: #fff;
+	@include opacity(1);
+	padding: 100px 10px 10px;
+	height: 400px;
+	position: fixed;
+	top: -270px;
+	left: -50px;
+	width: 220px;
+}
+
+#pulldown 
+{
+	z-index: 11111;
+	left: 49%;
+	background: #ccc;
+	color: #fff;
+	padding: 6px;
+	cursor: pointer;
+}
+
+.dir {
+	li { 
+		display: block;
+		padding: 3px 4px;
+		background: #f9f9f9;
+		border: 1px solid #ccc;
+	}
 }
 
 @font-face {

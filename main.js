@@ -16,7 +16,7 @@ var usermap = {
 		this.markers = markers;
         var mapOptions = {
           center: new google.maps.LatLng(42.330497742, -71.095794678),
-          zoom: 10,
+          zoom: 12,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
@@ -91,7 +91,6 @@ var usermap = {
 		pt = new google.maps.LatLng(42.2078543, -71.0011385);
 		markers.push(new google.maps.Marker({position: pt, title: "Braintree Station", icon: tico}));
 			redBranchBraintree.push(pt);
-		console.log(pt);
 		// Render markers to map
 		for (var m in markers) {
 			var that = this;
@@ -99,11 +98,25 @@ var usermap = {
 			google.maps.event.addListener(markers[m], 'click', function() {
 				$(".pane").hide();
 				stopName = this.title;
-				console.log(markers[m]);
 				var stationData = that.getJSON("http://mbtamap.herokuapp.com/mapper/station_schedule_all.json?stop_name=" + stopName);
 				stationData = that.formatSchedule(stationData);
-				infowindow.setContent("<h3>" + stopName + "</h3>" + stationData);	
-				infowindow.open(map, this);
+				// var boxText = document.createElement("div");
+    //     		boxText.style.cssText = "border: 1px solid black; margin-top: 8px; background: yellow; padding: 5px;";
+    //     		boxText.innerHTML = "<h3>" + stopName + "</h3>" + stationData;
+        		var myOptions = {
+	                 content: "<div class='infomobile'><h3>" + stopName + "</h3>" + stationData + "<div class='close'>X</div></div>"
+	                ,disableAutoPan:false
+	                ,boxStyle: { 
+	                  opacity: 0.95
+	                 }
+	                ,closeBoxMargin: "10px 2px 2px 2px"
+	                ,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
+	                ,isHidden: false
+	                ,enableEventPropagation: true
+       			 };
+				var ib = new InfoBox(myOptions);
+				// console.log(ib.offset());
+				ib.open(map, this);
 			});
 		}
 		redLine = new google.maps.Polyline({
@@ -143,7 +156,6 @@ var usermap = {
 			table += "<td>" + train.time_remaining + "</td>";
 			table += "<td>" + train.direction + "</td>";
 			table += "</tr>";
-
 		}
 		return table + "</table>";
 	},
@@ -181,43 +193,6 @@ var usermap = {
 	      }
 	    }
 	  }
-	// },
-	// placeDesirables: function() {
-	// 	var desirables =  JSON.parse(this.getJSON("http://messagehub.herokuapp.com/a3.json"));
-	// 	var map = this.map;
-	// 	var carmen = "carmen.png";
-	// 	var waldo = "waldo.png";
-	// 	var mark, d, icon;
-
-	// 	for (var i = 0; i < desirables.length; i++){
-	// 		if (desirables[i].name == "Carmen Sandiego"){
-	// 			icon = carmen;
-	// 		}
-	// 		else { icon = waldo; }
-	// 		var note = desirables[i].loc.note;
-	// 		mark = new google.maps.Marker({
-	// 			position: new google.maps.LatLng(desirables[i].loc.latitude, desirables[i].loc.longitude),
-	// 			title: desirables[i].name,
-	// 			icon: icon
-	// 		});
-	
-	// 		var d = this.getDistance(this.userLat, this.userLon, desirables[i].loc.latitude, desirables[i].loc.longitude);
-	// 		var box = document.createElement("aside");
-	// 		box.innerHTML = desirables[i].name + " is " + d + " miles away ";
-	// 		box.style.left = i * 300 + "px";
-	// 		box.style.background = "url(" + icon + ") left bottom no-repeat rgba(255,255,255,.85)";
-	// 		var c = document.getElementById("map-canvas");
-	// 		c.appendChild(box);
-	// 		mark.setMap(map);
-	// 		var that = this;
-	// 		google.maps.event.addListener(mark, 'click', function() {
-	// 			var infowindow = new google.maps.InfoWindow();
-	// 			infowindow.setContent(note);	
-	// 			infowindow.open(that.map, this);
-	// 		});
-
-	// 	}
-	// },
 	},
 	getDistance: function(lat1, lon1, lat2, lon2) {
 		Number.prototype.toRad = function() {
@@ -239,7 +214,6 @@ var usermap = {
 		var that = this;
 		if (navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(function(position) {
-				console.log(position);
 				that.userLat = position.coords.latitude;
 				that.userLon = position.coords.longitude;
 				//that.placeDesirables();
@@ -247,58 +221,9 @@ var usermap = {
 				userMark = new google.maps.Marker({position: userLoc, title: "you're here!"});
 				userMark.setMap(that.map);
 				that.map.setCenter(userLoc, 12);
-				//var closest = that.findClosest();
-				// var cpt = new google.maps.LatLng(closest.lat,closest.lon);
-				// google.maps.event.addListener(userMark, 'click', function() {
-				// 	var infowindow = new google.maps.InfoWindow();
-				// 	infowindow.setContent("The closest station is " + closest.min + " miles away, as the raven flies");	
-				// 	infowindow.open(that.map, this);
-				// });
-				// var closestLine = new google.maps.Polyline({
-				// 	path: [userLoc, cpt ],
-				// 	strokeColor: "#000000",
-				// 	strokeOpacity: 0.5,
-				// 	strokeWeight: 7
-				// });
-				// closestLine.setMap(that.map);
 			});
 		}
 	}
-	// findClosest: function() {
-	// 	var min, d, pt, clat;
-	// 	var lat = this.userLat;
-	// 	var lon = this.userLon;
-	// 	for (var i = 0; i < this.braintree.length; i++) {
-	// 		d = this.getDistance(lat,lon,this.braintree[i].ib, this.braintree[i].jb);
-	// 		if (i == 0) min = d;
-	// 		if (d < min){
-	// 			min = d;
-	// 			pt = this.braintree[i];
-	// 			clat = this.braintree[i].ib;
-	// 			clong = this.braintree[i].jb;
-	// 		}
-	// 	}
-	// 	for (var i = 0; i < this.redStations.length; i++) {
-	// 		d = this.getDistance(lat,lon,this.redStations[i].ib, this.redStations[i].jb);
-	// 		if (d < min){
-	// 			min = d;
-	// 			this.redStations[i];
-	// 			clat = this.redStations[i].ib;
-	// 			clong = this.redStations[i].jb;
-
-	// 		}
-	// 	}
-	// 	for (var i = 0; i < this.redBranchAshmont.length; i++) {
-	// 		d = this.getDistance(lat,lon,this.redBranchAshmont[i].ib, this.redBranchAshmont[i].jb);
-	// 		if (d < min){
-	// 			min = d;
-	// 			pt = this.redBranchAshmont[i];
-	// 			clat = this.redBranchAshmont[i].ib;
-	// 			clong = this.redBranchAshmont[i].jb;
-	// 		}
-	// 	}
-	// 	return { min: min, lat: clat, lon: clong };
-	// }
 };
 	usermap.initialize();
 
@@ -316,7 +241,22 @@ var usermap = {
 		$(this).append(close);
 	});
 	$(".close").on("click", function() {
+		console.log($(this).closest("div"));
 		$(this).parent().slideUp(100);
 	});
+	$("#map-canvas").on("click", function() {
+		$("#search").slideUp("fast");
+		$("#pulldown").show();
+	});
+	$("#pulldown").on("click", function() {
+		$("#search").show();
+		$(this).slideUp();
+		$(".infomobile").remove();
+	});
+	$("body").on("created", function() {
+
+
+	})
+
 
 });

@@ -5,6 +5,7 @@
 		<script type="text/javascript"
 		  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoS1bfOyPBTbYH1GhtD4xRs9XrT17nGwg&sensor=true">
 		</script>
+		<script type="text/javascript" src='infobox.js'></script>
 		<script type="text/javascript" src='main.js'></script>
   	  	<title>Handicap Stops</title>
 	  	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
@@ -19,11 +20,13 @@
 		<div class='fixed hidden pane' id='routes'>
 			<div class='fixed hidden pane' id='delete-home'>
 				<p>Are you sure you want to delete the route "Home to Work"?</p>
-				<button class='inline fr close'>Yes</button>			
+				<button class='inline fr close'>Yes</button>	
+				<button class='inline fr close'>No</button>			
 			</div>
 			<div class='fixed hidden pane' id='delete-sam'>
 				<p>Are you sure you want to delete the route "Sam to Nelly"?</p>
 				<button class='inline fr close'>Yes</button>	
+				<button class='inline fr close'>No</button>	
 			</div>
 
 			<div class='fixed hidden pane' id='update-home'>
@@ -32,13 +35,15 @@
 				<input type='text' placeholder='Change End Name' value='Work'/>
 				<input type='text' placeholder='Change End Loc' value='1 Rogers Street, Cambridge, MA, 02145'/>
 				<button class='inline fr close'>Update</button>			
+				<button class='inline fr close'>Cancel</button>			
 			</div>
 			<div class='fixed hidden pane' id='update-sam'>
 				<input type='text' placeholder='Change Start Name' value="Sam"/>
 				<input type='text' placeholder='Change Start Loc' value='10 Winthrop Ave, Medford MA 02155'/>
 				<input type='text' placeholder='Change End Name' value="Nelly"/>
 				<input type='text' placeholder='Change End Loc' value='1234 Southie by the Water, 03456'/>
-				<button class='inline fr close'>Update</button>	
+				<button class='inline fr close'>Update</button>			
+				<button class='inline fr close'>Cancel</button>	
 			</div>
 
 			<h2>Your routes</h2>
@@ -91,6 +96,15 @@
 					<td>Yes</td>
 				</tr>
 			</table>
+			<div style='padding:10px 5px;'>Stations: Davis, Porter, Harvard, Central</div>
+			<h3>Directions to Davis:</h3>
+			<ul class='dir'>
+				<li>Take a left on Winthrop Street (.4 miles)</li>
+				<li>Take a left on Broadway Ave. (.2 miles)</li>
+				<li>Take a right on Sommer Street (.2 miles)</li>
+				<li>Take a left on Elm Street(.1 mile)</li>
+				<li>Davis Square Station is on the right</li>
+			</ul>
 		</div>
 		<div class='fixed hidden pane' id='accessibility'>
 			<h2>Accessibility</h2>
@@ -115,12 +129,13 @@
 
 			<button class='close fr'>Save Settings</button>
 		</div>
-			<div class='fixed bar'>
-				<input type='text' placeholder='My location'/>
+			<div class='fixed bar' id='search'>
+				<input type='text' placeholder='My location (optional)'/>
 				<input type='text' placeholder='Destination' />
 				<button class='fr'>+</button>			
 				<button class='inline'>Map Route</button>			
 			</div>
+			<div class='fixed hidden' id='pulldown'>^</div>
 			<div id='map-canvas'></div>
 			<div class='fixed bar'>
 				<nav>

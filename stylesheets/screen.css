@@ -132,15 +132,16 @@ a:visited {
 /* line 56, ../sass/screen.scss */
 #map-canvas {
   height: 100%;
+  position: relative;
 }
 
-/* line 60, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 p {
   line-height: 1.5em;
   text-indent: .6em;
 }
 
-/* line 65, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 .wrap {
   display: block;
   width: 2.31in;
@@ -150,7 +151,7 @@ p {
   position: relative;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 input[type='text'] {
   width: 97%;
   margin: 5px auto;
@@ -173,7 +174,7 @@ input[type='text'] {
   background: #fff;
   background: rgba(255, 255, 255, 0.9);
 }
-/* line 90, ../sass/screen.scss */
+/* line 91, ../sass/screen.scss */
 input[type='text']:focus {
   -webkit-box-shadow: inset 0px 1px 2px #bbbbbb, 0px 1px 1px #f9f9f9;
   -moz-box-shadow: inset 0px 1px 2px #bbbbbb, 0px 1px 1px #f9f9f9;
@@ -200,7 +201,7 @@ input[type='text']:first-of-type:-ms-input-placeholder {
   color: #a5d5ff;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 .bar {
   z-index: 1000;
   width: 100%;
@@ -210,21 +211,21 @@ input[type='text']:first-of-type:-ms-input-placeholder {
   -moz-box-shadow: 0px 1px 3px #bbbbbb;
   box-shadow: 0px 1px 3px #bbbbbb;
 }
-/* line 106, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .bar:last-of-type {
   -webkit-box-shadow: 0px -1px 3px #bbbbbb;
   -moz-box-shadow: 0px -1px 3px #bbbbbb;
   box-shadow: 0px -1px 3px #bbbbbb;
   bottom: 0;
 }
-/* line 111, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 .bar nav ul {
   width: 100%;
   height: 40px;
   font-family: 'icons';
   font-size: 1.3em;
 }
-/* line 117, ../sass/screen.scss */
+/* line 118, ../sass/screen.scss */
 .bar nav ul li {
   display: inline-block;
   height: 100%;
@@ -236,39 +237,39 @@ input[type='text']:first-of-type:-ms-input-placeholder {
   cursor: pointer;
   border-right: 1px solid #ccc;
 }
-/* line 128, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 .bar nav ul li:active {
   -webkit-box-shadow: inset 0px 0px 9px #cccccc;
   -moz-box-shadow: inset 0px 0px 9px #cccccc;
   box-shadow: inset 0px 0px 9px #cccccc;
 }
 
-/* line 137, ../sass/screen.scss */
+/* line 138, ../sass/screen.scss */
 section {
   margin: 5px 10px;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 142, ../sass/screen.scss */
 button {
   padding: 5px;
   margin: 3px 5px;
 }
 
-/* line 146, ../sass/screen.scss */
+/* line 147, ../sass/screen.scss */
 label {
   cursor: pointer;
   padding: 5px;
 }
 
-/* line 148, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 [data-info] {
   position: relative;
 }
-/* line 151, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 [data-info]:hover::before, [data-info]:hover::after {
   display: block;
 }
-/* line 153, ../sass/screen.scss */
+/* line 154, ../sass/screen.scss */
 [data-info]:after {
   font-family: sans-serif;
   position: absolute;
@@ -289,7 +290,7 @@ label {
   border: 1px solid #f9f9f9;
   left: 3px;
 }
-/* line 170, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 [data-info]:before {
   position: absolute;
   content: "";
@@ -303,7 +304,7 @@ label {
   z-index: 111;
 }
 
-/* line 184, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 .switch {
   position: relative;
   cursor: pointer;
@@ -325,13 +326,13 @@ label {
   background: #fff;
   padding: 0;
 }
-/* line 196, ../sass/screen.scss */
+/* line 197, ../sass/screen.scss */
 .switch:hover {
   -webkit-box-shadow: inset 0px 1px 2px #dddddd, 0px 0px 4px #64b3fc;
   -moz-box-shadow: inset 0px 1px 2px #dddddd, 0px 0px 4px #64b3fc;
   box-shadow: inset 0px 1px 2px #dddddd, 0px 0px 4px #64b3fc;
 }
-/* line 200, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 .switch .mask {
   pointer-events: none;
   position: absolute;
@@ -371,7 +372,7 @@ label {
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-/* line 222, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 .switch .mask:after {
   content: "c";
   display: block;
@@ -382,17 +383,17 @@ label {
   color: red;
 }
 
-/* line 234, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 [type='checkbox']:checked ~ .switch .mask {
   left: 52.6%;
 }
-/* line 237, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 [type='checkbox']:checked ~ .switch .mask:after {
   content: "b";
   color: green;
 }
 
-/* line 243, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
 .pane {
   z-index: 10000;
   width: 100%;
@@ -408,54 +409,87 @@ label {
   box-shadow: 0px 1px 3px #bbbbbb;
 }
 
-/* line 256, ../sass/screen.scss */
+/* line 257, ../sass/screen.scss */
 div.close {
   position: absolute;
-  top: 0px;
   right: 0px;
+  top: 10px;
   cursor: pointer;
-  width: 20px;
-  height: 20px;
   display: block;
+  width: 50px;
+  color: #0277ED;
+  height: 50px;
   text-align: center;
+  z-index: 1111;
 }
 
-/* line 267, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 ul.your-routes {
   display: block;
   width: 95%;
   margin: 10px auto;
 }
-/* line 272, ../sass/screen.scss */
+/* line 275, ../sass/screen.scss */
 ul.your-routes li {
   display: block;
   border: 1px solid #ddd;
   border-bottom: none;
   padding: 4px 6px;
 }
-/* line 278, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 ul.your-routes li:last-child {
   border-bottom: 1px solid #ddd;
 }
-/* line 282, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 ul.your-routes li span {
   padding: 0px 5px;
   color: #61A7ED;
   cursor: pointer;
 }
-/* line 287, ../sass/screen.scss */
+/* line 290, ../sass/screen.scss */
 ul.your-routes li span:hover {
   color: #A5D5FF;
 }
-/* line 288, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 ul.your-routes li span.delete {
   color: red;
 }
 
-/* line 293, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 td {
   width: 50%;
   text-align: center;
+  border: 1px solid #ccc;
+}
+
+/* line 302, ../sass/screen.scss */
+.infomobile {
+  background: #fff;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  padding: 100px 10px 10px;
+  height: 400px;
+  position: fixed;
+  top: -270px;
+  left: -50px;
+  width: 220px;
+}
+
+/* line 314, ../sass/screen.scss */
+#pulldown {
+  z-index: 11111;
+  left: 49%;
+  background: #ccc;
+  color: #fff;
+  padding: 6px;
+  cursor: pointer;
+}
+
+/* line 324, ../sass/screen.scss */
+.dir li {
+  display: block;
+  padding: 3px 4px;
+  background: #f9f9f9;
   border: 1px solid #ccc;
 }
 
